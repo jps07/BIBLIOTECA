@@ -3,6 +3,6 @@ var router = express.Router();
 const librosController= require( "../controllers/librosController");
 //se cambia ruta en index.
 /* GET home page. */
-router.get('/', );
+router.get('/',librosController);
 
 module.exports = router;
