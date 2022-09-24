@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//se configura ruta en usuarios para permitir el acceso direto a libros route.
-app.use('/libros', usersRouter);
+//se configura ruta en usuarios para permitir el acceso direto a libros router.
+app.use('/libros', librosRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
