@@ -4,5 +4,5 @@ const librosController= require( "../controllers/librosController");
 //se cambia ruta en index.
 /* GET home page. */
 router.get('/',librosController.index);
-
+router.get('/crear',librosController.crear);
 module.exports = router;

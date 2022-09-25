@@ -9,10 +9,12 @@ module.exports = {
 
             console.log(datos);
 
-            res.render('libros/index', { title: 'Aplicación',libros:datos });
+            res.render('libros/index', { title: 'Aplicación', libros: datos });
         });
+    },
+    crear:function (req, res) {
+        res.render('libros/crear);
 
+ }
 
-
-    }
 }   
