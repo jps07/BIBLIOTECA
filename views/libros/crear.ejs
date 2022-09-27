@@ -1,4 +1,5 @@
-<form method="post" action="">
+<%-include("../layouts/cabecera.ejs") %>
+<form method="post" action="/libros">
     <div class="form-group">
         <label for="my-input">Codigo:</label>
         <input id="my-input" class="form-control" type="text" name="codigo_libro">
@@ -30,3 +31,4 @@
 <button class="btn btn-primary" type="submit">Guardar</button>
  
 </form>
+<%-include("../layouts/pie.ejs") %>

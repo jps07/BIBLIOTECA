@@ -15,6 +15,8 @@ module.exports = {
     crear:function (req, res) {
         res.render('libros/crear');//corregi comilla simple y ya jala.
 
- }
+    },
+    guardar:function (req, res) {
+    }
 
 }   
