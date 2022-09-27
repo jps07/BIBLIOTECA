@@ -17,6 +17,7 @@ module.exports = {
 
     },
     guardar:function (req, res) {
+        res res.send(req.body);
     }
 
 }   
