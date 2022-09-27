@@ -12,12 +12,19 @@ module.exports = {
             res.render('libros/index', { title: 'Aplicación', libros: datos });
         });
     },
-    crear:function (req, res) {
+    crear: function (req, res) {
         res.render('libros/crear');//corregi comilla simple y ya jala.
 
     },
-    guardar:function (req, res) {
-        res.send(req.body);
+    guardar: function (req, res) {
+        console.log(req.body);
+
+
+        libro.insertar(conexion, req.body, function (err, datos) {
+            res.redirec('/libros')
+
+
+        });
     }
 
 }   
