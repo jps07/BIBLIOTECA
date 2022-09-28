@@ -1,0 +1,51 @@
+<%-include("../layouts/cabecera.ejs") %>
+        <br />
+        <br />
+        <a href="/libros/crear" class="btn btn-primary" type="button">Crear un nuevo libro </a>
+        <br />
+        <br />
+        <table class="table table-light">
+            <thead class="thead-light">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Autores</th>
+                    <th>ISBN</th>
+                    <th>Solicitado</th>
+                    <th>Año</th>
+                    <th>Genero</th>
+                    <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for( let libro=0; libro < libros.length; libro++ ) { %>
+                    <tr>
+                        <td>
+                            <%=libros[libro].codigo_libro %>
+                        </td>
+                        <td>
+                            <%=libros[libro].nombre %>
+                        </td>
+                        <td>
+                            <%=libros[libro].autores %>
+                        </td>
+                        <td>
+                            <%=libros[libro].ISBN %>
+                        </td>
+                        <td>
+                            <%=libros[libro].solicitadopor %>
+                        </td>
+                        <td>
+                            <%=libros[libro].año_edicion %>
+                        </td>
+                        <td>
+                            <%=libros[libro].genero %>
+                        </td>
+                        <td>Editar Í Borrar </td>
+                    </tr>
+
+                    <% } %>
+
+            </tbody>
+        </table>
+        <%-include("../layouts/pie.ejs") %>
